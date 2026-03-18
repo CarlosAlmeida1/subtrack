@@ -1,0 +1,30 @@
+@import 'variables';
+@import 'mixins';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $bg-color;
+  color: $text-color;
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  cursor: pointer;
+  background-color: $primary-color;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: filter 0.2s;
+
+  &:hover {
+    filter: brightness(1.2); // SASS facilita efeitos de hover
+  }
+}

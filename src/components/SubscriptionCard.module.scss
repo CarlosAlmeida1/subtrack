@@ -1,0 +1,72 @@
+@import "../styles/variables.scss";
+@import "../styles/mixins.scss";
+
+.card {
+  @include card-style;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+  cursor: default;
+
+
+  .info {
+    h3 {
+      color: $primary-color;
+      font-size: 1.2rem;
+      margin-bottom: 0.3rem;
+      font-weight: 600;
+    }
+
+    span {
+      display: inline-block;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 2px 8px;
+      background: rgba($primary-color, 0.1);
+      border-radius: 4px;
+      color: $primary-color;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+      opacity: 0.6;
+      margin: 0;
+    }
+  }
+
+  .priceArea {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    p {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: $success;
+      margin: 0;
+    }
+
+    button {
+      background: transparent;
+      border: 1px solid transparent;
+      padding: 6px 12px;
+      color: $danger;
+      font-size: 0.75rem;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s;
+
+      &:hover {
+        background: rgba($danger, 0.1);
+        border-color: rgba($danger, 0.2);
+      }
+    }
+  }
+}
